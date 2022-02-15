@@ -103,10 +103,10 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &kp ESC  &none      &none      &kp HOME     &kp END             &PG_DN                /**/    &none       &none          &none      &none        &none       &none
-    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT          &mt_l LC(ENTER) ENTER /**/    &none       &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
-    &kp LALT  &none     &none      &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &PG_UP              /**/    &none       &none          &kp SEMI   &kp COLON    &kp UNDER   &none
-                                   &trans       &trans                &trans              /**/    &trans      &trans         &trans
+    &kp ESC  &none      &none      &kp HOME     &kp END             &kp PG_DN                /**/    &none       &none          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT          &mt_l LC(ENTER) ENTER   /**/    &none       &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
+    &kp LALT  &none     &none      &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &kp PG_UP              /**/    &none       &none          &kp SEMI   &kp COLON    &kp UNDER   &none
+                                   &trans       &trans                &trans                /**/    &trans      &trans         &trans
                         >;
             };
 
