@@ -72,8 +72,8 @@
 //                             | ESC |               | DEL |
         bindings = <
     &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G           /**/    &kp J                   &kp L           &kp U           &kp Y        &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &mt_l LGUI A   &mt_l LALT R     &mt_s LSHFT S   &mt_s LCTRL T   &kp D           /**/    &kp H                   &mt_s LSHFT N   &mt_s LALT E   &mt_l LCTRL I &mt_l LGUI O   &kp ESC
-    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K                   &kp M           &kp COMMA      &kp DOT       &kp MINUS       &kp LALT
+    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D           /**/    &kp H                   &kp N           &kp E           &kp I        &kp O            &kp ESC
+    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K                   &kp M           &kp COMMA       &kp DOT      &kp MINUS       &kp LALT
                                             &kp LGUI   &kp LCTRL   &lt RAISE ENTER       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
@@ -103,10 +103,10 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &kp ESC  &none      &none      &none        &none               &none      /**/      &none  &none          &none      &none        &none       &none
-    &kp DEL   &kp LEFT  &kp DOWN   &kp UP       &kp  RIGHT          &trans       /**/    &none  &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
-    &kp LALT  &none     &none      &kp LC(LG(RIGHT)) &kp LC(LG(RIGHT)) &none  /**/       &none  &none          &kp SEMI   &kp COLON    &kp UNDER   &none
-                                   &trans       &trans                &trans      /**/    &trans &trans              &trans
+    &kp ESC  &none      &none      &kp HOME     &kp END             &PG_DN                /**/    &none       &none          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT          &mt_l LC(ENTER) ENTER /**/    &none       &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
+    &kp LALT  &none     &none      &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &PG_UP              /**/    &none       &none          &kp SEMI   &kp COLON    &kp UNDER   &none
+                                   &trans       &trans                &trans              /**/    &trans      &trans         &trans
                         >;
             };
 
@@ -117,9 +117,9 @@
 // |      | Und | Cut | Cpy | Pst |     |   | PLY |  V+ |  V- | MTE |  \  |      |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &trans  &kp LBKT   &kp RBKT       &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &none       &trans
-    &trans  &kp MINUS  &kp UNDER    &kp EQUAL   &kp PLUS    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
-    &trans  &none      &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
+    &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &kp EQUAL       &trans
+    &trans  &kp LBRC  &kp RBRC       &kp LPAR   &kp RPAR    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
+    &trans  &none     &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
                         >;
             };
@@ -131,9 +131,9 @@
 // |       |  {  |  }  |   (  |  )  |  ~   |   | PLAY |  1    |  2    |  3   |   \   |      |
 //                     |      |     |      |   | MUTE |  0    |  .    |
         bindings = <
-    &none	&none	    &none       &kp LBKT	&kp RBKT  	&kp STAR    /**/    &kp PERCENT &kp PLUS    &kp STAR	&kp DOT     &kp EQUAL   &none
-	&none   &kp N1	    &kp N2	    &kp N3      &kp N4	    &kp N5   /**/       &kp N6      &kp N7      &kp N8      &kp N9	    &kp N0  	&none
-	&none   &kp LBRC    &kp RBRC	&kp LPAR    &kp RPAR   	&kp TILDE   /**/	&none	    &none       &kp SEMI    &kp DOT     &kp MINUS   &trans
+    &none	  &kp LBKT    &kp RBKT   &kp LPAR   &kp RPAR 	&kp FSLH    /**/    &kp PERCENT &kp PLUS    &kp STAR	&kp DOT     &kp EQUAL   &none
+	&kp DEL   &kp N1	  &kp N2	 &kp N3      &kp N4	    &kp N5   /**/       &kp N6      &kp N7      &kp N8      &kp N9	    &kp N0  	&none
+	&none     &kp LBRC &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT   /**/   	&none	    &none       &kp SEMI    &kp DOT     &kp MINUS   &trans
 	                    		    &trans       &trans      &trans      /**/    &none       &mo FUNCTION    &none
                         >;
             };            
