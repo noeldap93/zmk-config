@@ -91,7 +91,7 @@
     &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T   /**/    &kp Y           &kp U           &mt_l LC(I) I  &kp O        &kp P           &none
     &none   &mt_l LGUI A    &mt_l LALT S    &mt_s LSHFT D   &mt_s LCTRL F   &kp G           /**/    &kp H           &mt_s LCTRL J   &mt_s LSHFT K  &mt_l LALT L &mt_l LGUI SEMI &kp SQT
     &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &mt_l LC(N) N   &kp M           &kp COMMA      &kp DOT      &kp FSLH        &kp CAPS
-                                            &lt NUMPAD TAB  &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
+                                            &kp LGUI   &kp LCTRL   &lt RAISE ENTER       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
 
@@ -105,7 +105,7 @@
         bindings = <
     &kp ESC  &none      &none      &none        &none               &none      /**/      &none  &none          &none      &none        &none       &none
     &kp DEL   &kp LEFT  &kp DOWN   &kp UP       &kp  RIGHT          &trans       /**/    &none  &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
-    &kp LALT  &kp trans &kp trans  &kp LC(LG(RIGHT)) &kp LC(LG(RIGHT)) &none  /**/       &none  &none          &kp SEMI   &kp COLON    &kp UNDER   &none
+    &kp LALT  &none     &none      &kp LC(LG(RIGHT)) &kp LC(LG(RIGHT)) &none  /**/       &none  &none          &kp SEMI   &kp COLON    &kp UNDER   &none
                                    &trans       &tans                &trans      /**/    &trans &trans              &trans
                         >;
             };
@@ -117,9 +117,9 @@
 // |      | Und | Cut | Cpy | Pst |     |   | PLY |  V+ |  V- | MTE |  \  |      |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &trans  &kp LBKT   &kp RBKT       &kp BSLH    &kp FSLH  &kp AMPS /**/    &kp none      &kp PLUS   &kp STAR        &kp none    &kp none    &trans
-    &trans  &kp MINUS  &kp UNDER    &kp EQUAL   &kp PLUS    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT       &kp ESC    
-    &trans  &none      &kp PERCENT    &kp DOLLAR   &kp HASH   &AT       /**/    &none       &none      &kp SEMI        &kp COLON   &kp UNDER   &trans
+    &trans  &kp LBKT   &kp RBKT       &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &none       &trans
+    &trans  &kp MINUS  &kp UNDER    &kp EQUAL   &kp PLUS    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
+    &trans  &none      &kp PERCENT    &kp DOLLAR   &kp HASH   &AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
                         >;
             };
@@ -134,7 +134,7 @@
     &none	&none	    &none       &kp LBKT	&kp RBKT  	&kp STAR    /**/    &kp PERCENT &kp PLUS    &kp STAR	&kp DOT     &kp EQUAL   &none
 	&none   &kp N1	    &kp N2	    &kp N3      &kp N4	    &kp N5   /**/       &kp N6      &kp N7      &kp N8      &kp N9	    &kp N0  	&none
 	&none   &kp LBRC    &kp RBRC	&kp LPAR    &kp RPAR   	&kp TILDE   /**/	&none	    &none       &kp SEMI    &kp DOT     &kp MINUS   &trans
-	                    		    &trans       &trans      &trans      /**/    &none       &mo FUNCTION    &kp none
+	                    		    &trans       &trans      &trans      /**/    &none       &mo FUNCTION    &none
                         >;
             };            
             SPECIAL {
