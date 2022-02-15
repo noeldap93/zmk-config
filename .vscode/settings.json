@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.sql": "postgres",
+        "*.keymap": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
