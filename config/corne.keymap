@@ -119,7 +119,7 @@
         bindings = <
     &trans  &kp LBKT   &kp RBKT       &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &none       &trans
     &trans  &kp MINUS  &kp UNDER    &kp EQUAL   &kp PLUS    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
-    &trans  &none      &kp PERCENT    &kp DOLLAR   &kp HASH   &AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
+    &trans  &none      &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
                         >;
             };
