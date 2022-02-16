@@ -25,7 +25,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_F12 {
+        combo_F2 {
             timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp F12>;
@@ -99,9 +99,9 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G               /**/    &mt_m LC(1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D               /**/    &mt_m LC(2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
-    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LG(LS(B)) B   /**/    &mt_m LC(3) K     &kp M               &mt_m LC(LS(O))COMMA      &kp DOT        &kp MINUS       &kp LALT
+    &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G               /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
+    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D               /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LG(V) V   &mt_l LG(LS(S)) B   /**/    &mt_m LC(N3) K     &kp M               &mt_m LC(LS(O))COMMA      &kp DOT        &kp MINUS       &kp LALT
                                                 &kp LGUI   &kp LCTRL   &lt RAISE ENTER              /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
