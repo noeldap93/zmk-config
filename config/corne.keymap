@@ -100,7 +100,7 @@
 //                             | ESC |               | DEL |
         bindings = <
     &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G               /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D               /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &mt_l LC(ENTER) D   /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
     &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LG(V) V   &mt_l LG(LS(S)) B   /**/    &mt_m LC(N3) K     &kp M               &mt_m LC(LS(O))COMMA      &kp DOT        &kp MINUS       &kp LALT
                                                 &kp LGUI   &kp LCTRL   &lt RAISE ENTER              /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
