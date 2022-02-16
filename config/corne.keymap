@@ -25,18 +25,37 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_F12 {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <17 16>;
+            bindings = <&kp F12>;
+            layers = <QWERTY COLEMAK>;
+        };
+        combo_F2 {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp F2>;
+            layers = <QWERTY COLEMAK>;
+        };
+        combo_SQT {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
             bindings = <&kp SQT>;
             layers = <QWERTY COLEMAK>;
         };
-       /* combo_castle {
+        combo_Format {
             timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp LC(LS(C))>;
-            layers = <AOE AOERAISE>;
-        };*/
+            key-positions = <5 4>;
+            bindings = <&kp LA(LS(F))>;
+            layers = <QWERTY COLEMAK>;
+        };
+        combo_AltTab {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp LA(TAB)>;
+            layers = <QWERTY COLEMAK>;
+        };
+
     };
     behaviors {
         mt_s: ctrl_shift {
@@ -46,6 +65,15 @@
             tapping-term-ms = <180>;
             quick_tap_ms = <0>;
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        mt_m: medium {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Fast hold";
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         mt_l: alt_gui {
@@ -65,16 +93,16 @@
             colemak {
 // GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
 // -----------------------------------------------------------------------------------------
-// |    |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L  |  U  |  Y  |  ;  |      |
-// |    |  A  |  R  |  S  |  T  |  D  |   |  H  |  N  |  E  |  I  |  O  |  '   |
-// |    |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M  |  ,  |  .  |  /  | CAPS |
+// | 0   |  Q  |  W  |  F  |  P  |  G  |    6 |  J  |  L  |  U  |  Y  |  ;  |      |
+// | 12   |  A  |  R  |  S  |  T  |  D  |  18 |  H  |  N  |  E  |  I  |  O  |  '   |
+// | 24   |  Z  |  X  |  C  |  V  |  B  |  30 |  K  |  M  |  ,  |  .  |  /  | CAPS |
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G           /**/    &kp J                   &kp L           &kp U           &kp Y        &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D           /**/    &kp H                   &kp N           &kp E           &kp I        &kp O            &kp ESC
-    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K                   &kp M           &kp COMMA       &kp DOT      &kp MINUS       &kp LALT
-                                            &kp LGUI   &kp LCTRL   &lt RAISE ENTER       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
+    &kp TAB     &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G               /**/    &mt_m LC(1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
+    &kp BSPC    &kp A          &kp R            &kp S           &kp T           &kp D               /**/    &mt_m LC(2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp LSHFT   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LG(LS(B)) B   /**/    &mt_m LC(3) K     &kp M               &mt_m LC(LS(O))COMMA      &kp DOT        &kp MINUS       &kp LALT
+                                                &kp LGUI   &kp LCTRL   &lt RAISE ENTER              /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
 
