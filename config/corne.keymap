@@ -129,10 +129,10 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &kp TAB     &kp Q              &mt_l LC(W) W    &kp F           &kp P              &kp G                   /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &mt_l LA(LS(A)) A  &kp R            &kp S           &mt_l LC(LA(T)) T  &mt_m LS(LC(ENTER))  D /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp TAB     &kp Q              &mt_l LC(W) W    &kp F           &kp P              &mt_m LS(LC(ENTER)) G  /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
+    &kp BSPC    &mt_l LA(LS(A)) A  &kp R            &kp S           &mt_l LC(LA(T)) T  &mt_m LC(ENTER) D      /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
     &kp LSHFT   &mt_l LC(Z) Z      &mt_l LC(X) X    &mt_l LC(C) C   &mt_m LG(V) V      &mt_m LG(LS(S)) B      /**/    &mt_m LC(N3) K     &kp M               &mt_m LC(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LALT
-                                                &kp LGUI   &kp LCTRL   &lt RAISE ENTER                       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
+                                                &kp LGUI   &kp LCTRL   &lt RAISE ENTER                        /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
 
@@ -161,8 +161,8 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &kp ESC  &none      &none      &kp HOME     &kp END             &mt_l LS(LC(ENTER)) PG_DN /**/   &none       &none          &none      &none        &none       &none
-    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT          &mt_l LC(ENTER) ENTER   /**/    &kp QMARK   &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
+    &kp ESC  &none      &none      &kp HOME     &kp END               &kp PG_DN             /**/   &none       &none          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT            &mt_m LS(LC(K)) ENTER /**/    &kp QMARK   &kp LSHFT      &kp LALT   &kp LCTRL    &kp LGUI    &none
     &kp LALT  &none     &none      &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &kp PG_UP             /**/   &kp EXCL    &none          &kp SEMI   &kp COLON    &kp UNDER   &none
                                    &trans       &trans                &trans                /**/    &trans      &trans         &trans
                         >;
@@ -217,8 +217,8 @@
 //                   |     |     |     |   |     | ADJ |     |
 // -------------------------------------   -------------------------------------
         bindings = <
-    &bootloader     &none   &kp F7   &kp F8   &kp F9   &kp F10   /**/    &C_PREV     &kp C_PLAY_PAUSE   &kp C_VOL_UP    &kp C_VOL_DN      &kp C_MUTE         &trans
-    &none           &none   &kp F4   &kp F5   &kp F6   &kp F12   /**/    &C_NEXT     &kp LSHFT       &kp LALT     &kp LCTRL      &kp LGUI        &none
+    &bootloader     &none   &kp F7   &kp F8   &kp F9   &kp F10   /**/    &kp C_PREV     &kp C_PLAY_PAUSE   &kp C_VOL_UP    &kp C_VOL_DN      &kp C_MUTE         &trans
+    &none           &none   &kp F4   &kp F5   &kp F6   &kp F12   /**/    &kp C_NEXT     &kp LSHFT       &kp LALT     &kp LCTRL      &kp LGUI        &none
     &none           &none   &kp F1   &kp F2   &kp F3   &kp F11  /**/     &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4 
                          &trans    &trans       &trans          /**/     &trans       &trans     &trans
                     >;
