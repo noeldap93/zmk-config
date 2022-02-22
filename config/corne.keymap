@@ -22,6 +22,11 @@
 #define MINERAISE 8
 #define ADJUST 9
 */
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
 
     combos {
@@ -109,9 +114,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        &caps_word {
-            continue-list = <UNDERSCORE MINUS>;
-        };
+
     };
 
     keymap {
