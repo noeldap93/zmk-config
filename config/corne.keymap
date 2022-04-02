@@ -130,10 +130,10 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &kp TAB     &kp Q              &mt_l LC(W) W    &kp F           &kp P              &mt_m LS(LC(ENTER)) G  /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
-    &kp BSPC    &mt_l LA(LS(A)) A  &kp R            &kp S           &mt_l LC(LA(T)) T  &mt_m LC(ENTER) D      /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
-    &kp LSHFT   &mt_l LC(Z) Z      &mt_l LC(X) X    &mt_l LC(C) C   &mt_m LG(V) V      &mt_m LG(LS(S)) B      /**/    &mt_m LC(N3) K     &kp M               &mt_m LC(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LALT
-                                                &kp LGUI   &kp LCTRL   &lt RAISE ENTER                        /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
+    &kp TAB     &kp Q              &mt_l LC(W) W    &kp F           &kp P              &mt_m LS(LC(ENTER))  G  /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
+    &kp BSPC    &mt_l LA(LS(A)) A  &kp R            &kp S           &mt_l LC(LA(T)) T  &mt_m LC(ENTER)      D  /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp LSHFT   &mt_l LC(Z) Z      &mt_l LC(X) X    &mt_l LC(C) C   &mt_m LG(V) V      &mt_m LG(LS(S))      B  /**/    &mt_m LC(N3) K     &kp M               &mt_m LC(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LALT
+                                                &kp LGUI   &kp LCTRL   &lt RAISE ENTER                         /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
 
@@ -147,10 +147,10 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T   /**/    &kp Y           &kp U           &mt_l LC(I) I  &kp O        &kp P           &none
-    &none   &mt_l LGUI A    &mt_l LALT S    &mt_s LSHFT D   &mt_s LCTRL F   &kp G           /**/    &kp H           &mt_s LCTRL J   &mt_s LSHFT K  &mt_l LALT L &mt_l LGUI SEMI &kp SQT
-    &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &mt_l LC(N) N   &kp M           &kp COMMA      &kp DOT      &kp FSLH        &kp CAPS
-                                            &kp LGUI   &kp LCTRL   &lt RAISE ENTER       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
+    &kp TAB     &kp Q               &mt_l LC(W) W   &kp E           &kp R           &mt_m LS(LC(ENTER)) T   /**/    &mt_m LC(N1) Y   &mt_m LC(GRAVE) U  &mt_l LC(I) I           &kp O        &mt_m F5 P     &sl SPECIAL
+    &kp BSPC    &mt_l LA(LS(A)) A   &kp  S          &kp D           &kp F           &mt_m LC(ENTER)     G   /**/    &mt_m LC(N2) H   &mt_s LCTRL J      &mt_s LSHFT K           &kp L        &kp SEMI       &kp ESC
+    &kp LSHFT   &mt_l LC(Z) Z       &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LG(V) V   &mt_m LG(LS(S))     B   /**/    &mt_m LC(N3) N   &kp M              &mt_m LC(LS(O)) COMMA   &kp DOT      &kp FSLH       &kp LALT
+                                            &kp LGUI   &kp LCTRL   &lt RAISE ENTER                          /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };
 
