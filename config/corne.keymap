@@ -14,8 +14,8 @@
 #define COLEMAKMAC 0
 #define COLEMAK 1
 #define QWERTY 2
-#define RAISEMAC 4
-#define RAISE 3
+#define RAISEMAC 3
+#define RAISE 4
 #define LOWER 5
 #define NUMPAD 6
 #define SPECIAL 7
@@ -100,6 +100,12 @@
             key-positions = <14 15>;
             bindings = <&kp LC(LS(MINUS))>;
             layers = <COLEMAKMAC>;
+        };
+        combo_MissionControl {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LC(UP)>;
+            layers = <RAISEMAC>;
         };
         combo_Caps {
             timeout-ms = <50>;
