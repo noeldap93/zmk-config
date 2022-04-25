@@ -11,15 +11,18 @@
 #include <dt-bindings/zmk/bt.h>
 
 //Layer definitions
-#define COLEMAK 0
-#define QWERTY 1
-#define RAISE 2
-#define LOWER 3
-#define NUMPAD 4
-#define SPECIAL 5
-#define FUNCTION 6
-#define GAMES 7
-#define AOM 8
+#define COLEMAKMAC 0
+#define COLEMAK 1
+#define QWERTY 2
+#define RAISEMAC 4
+#define RAISE 3
+#define LOWER 5
+#define NUMPAD 6
+#define SPECIAL 7
+#define FUNCTIONMAC 8
+#define FUNCTION 9
+#define GAMES 10
+#define AOM 11
 /*#define MINERAISE 8
 #define ADJUST 9
 */
@@ -36,31 +39,31 @@
             timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp F12>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
         combo_F2 {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp F2>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
         combo_F3 {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&kp F3>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
         combo_SQT {
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp SQT>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
         combo_Format {
             timeout-ms = <50>;
             key-positions = <5 4>;
             bindings = <&kp LA(LS(F))>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
         combo_AltTab {
             timeout-ms = <50>;
@@ -80,11 +83,29 @@
             bindings = <&kp LA(LEFT)>;
             layers = <QWERTY COLEMAK>;
         };
+        combo_AltTab_MAC {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp LG(TAB)>;
+            layers = <COLEMAKMAC>;
+        };
+        combo_AltRigth_MAC {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LC(MINUS)>;
+            layers = <COLEMAKMAC>;
+        };
+        combo_AltLeft_MAC {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LC(LS(MINUS))>;
+            layers = <COLEMAKMAC>;
+        };
         combo_Caps {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&caps_word>;
-            layers = <QWERTY COLEMAK>;
+            layers = <QWERTY COLEMAK COLEMAKMAC>;
         };
     };
     behaviors {
@@ -121,6 +142,22 @@
     keymap {
             compatible = "zmk,keymap";
 
+            colemakmac {
+// GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
+// -----------------------------------------------------------------------------------------
+// | 0   |  Q  |  W  |  F  |  P  |  G  |    6 |  J  |  L  |  U  |  Y  |  ;  |      |
+// | 12   |  A  |  R  |  S  |  T  |  D  |  18 |  H  |  N  |  E  |  I  |  O  |  '   |
+// | 24   |  Z  |  X  |  C  |  V  |  B  |  30 |  K  |  M  |  ,  |  .  |  /  | CAPS |
+//                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
+//                             | ESC |               | DEL |
+        bindings = <
+    &kp TAB     &kp Q              &mt_l LG(W) W    &kp F           &kp P              &mt_m LG(LS(ENTER))  G  /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl FUNCTIONMAC
+    &kp BSPC    &mt_l LA(LS(A)) A  &mt_l LC(R) R    &kp S           &mt_l LG(LA(T)) T  &mt_m LG(ENTER)      D  /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
+    &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(S))      B  /**/    &mt_m LC(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
+                                                &kp  LALT  &kp LGUI   &lt RAISEMAC ENTER                         /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
+                        >;
+            };      
+
             colemak {
 // GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
 // -----------------------------------------------------------------------------------------
@@ -154,6 +191,19 @@
                         >;
             };
 
+            raisemac {
+// -----------------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
+// |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
+//                    |     |     |     |   |     |     |     |
+        bindings = <
+    &kp ESC  &none      &none      &kp HOME     &kp END               &kp PG_DN             /**/   &none       &none          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP   &kp DOWN       &kp  RIGHT            &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT      &kp LGUI   &kp LALT   &kp LCTRL       &none
+    &kp LALT  &none     &none      &kp LC(LEFT) &kp LC(RIGHT)         &kp PG_UP             /**/   &kp EXCL    &none          &kp SEMI   &kp COLON    &kp UNDER   &none
+                                   &trans       &trans                &trans                /**/   &trans      &trans         &trans
+                        >;
+            };
 
             raise {
 // -----------------------------------------------------------------------------------------
@@ -169,6 +219,7 @@
                         >;
             };
 
+
             lower {
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  {  |  }  | DEL  |
@@ -178,7 +229,7 @@
         bindings = <
     &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &kp EQUAL       &trans
     &trans  &kp LBRC  &kp RBRC       &kp LPAR   &kp RPAR    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
-    &trans  &none     &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
+    &trans  &kp TILDE &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
                         >;
             };
@@ -193,7 +244,7 @@
     &none	  &kp LBKT    &kp RBKT   &kp LPAR   &kp RPAR 	&kp FSLH    /**/    &kp PERCENT &kp PLUS    &kp STAR	&kp DOT     &kp EQUAL   &none
 	&kp BSPC  &kp N1	  &kp N2	 &kp N3      &kp N4	    &kp N5   /**/       &kp N6      &kp N7      &kp N8      &kp N9	    &kp N0  	&none
 	&none     &kp LBRC &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT   /**/   	&none	    &none       &kp SEMI    &kp DOT     &kp MINUS   &trans
-	                    		    &trans       &trans      &trans      /**/    &none       &mo FUNCTION    &none
+	                    		    &trans       &trans      &trans      /**/    &none       &mo FUNCTIONMAC    &none
                         >;
             };            
             special {
@@ -210,6 +261,22 @@
                                 &trans      &trans              &trans      /**/        &trans      &trans      &trans
                     >;
             };
+
+        functionmac {
+// -------------------------------------   -------------------------------------
+// |  0  |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
+// |LS(0)|LS(1)|LS(2)|LS(3)|LS(4)|LS(5)|   |     |     |     |     |     |     |
+// |SC(G)|SC(Q)|SC(W)|SC(E)|SC(R)|SC(T)|   |     |     |     |     |     |     |
+//                   |     |     |     |   |     | ADJ |     |
+// -------------------------------------   -------------------------------------
+        bindings = <
+    &bootloader     &to GAMES   &kp F7   &kp F8   &kp F9   &kp F10   /**/    &kp C_PREV     &kp C_PLAY_PAUSE   &kp C_VOL_UP    &kp C_VOL_DN      &kp C_MUTE         &trans
+    &to QWERTY      &to AOM     &kp F4   &kp F5   &kp F6   &kp F12   /**/    &kp C_NEXT     &kp LSHFT           &kp LGUI        &kp LALT        &kp LCTRL       &none
+    &to COLEMAK     &none       &kp F1   &kp F2   &kp F3   &kp F11  /**/     &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4 
+                         &trans    &trans       &trans          /**/     &trans       &trans     &trans
+                    >;
+            };
+
             function {
 // -------------------------------------   -------------------------------------
 // |  0  |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
@@ -224,14 +291,10 @@
                          &trans    &trans       &trans          /**/     &trans       &trans     &trans
                     >;
             };
+
+
     games {
-// GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
-// -----------------------------------------------------------------------------------------
-// |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |      |
-// |    |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
-// |    |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CAPS |
-//                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
-//                             | ESC |               | DEL |
+
         bindings = <
     &kp TAB     &kp T       &kp  Q      &kp W       &kp E        &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
     &kp LSHFT   &kp G       &kp  A      &kp S       &kp D        &kp F      /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
@@ -240,15 +303,10 @@
                         >;
     };
 
+
     aom { // not developed
-// GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
-// -----------------------------------------------------------------------------------------
-// |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |      |
-// |    |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
-// |    |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CAPS |
-//                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
-//                             | ESC |               | DEL |
-        bindings = <
+
+    bindings = <
     &kp TAB     &kp T       &kp  Q      &kp W       &kp E        &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
     &kp LSHFT   &kp G       &kp  A      &kp S       &kp D        &kp F      /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
     &kp LCTRL   &kp Z       &kp  X      &kp C       &kp V        &kp B      /**/    &kp N   &kp M       &kp COMMA       &kp DOT     &kp P        &kp ESC
