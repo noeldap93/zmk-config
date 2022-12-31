@@ -320,7 +320,6 @@
                                         &kp N   &kp SPACE   &kp ENTER       /**/    &kp ESC   &to COLEMAK   &sl NUMPAD
                         >;
         };
-    };
 
     vscode { // not developed
 
