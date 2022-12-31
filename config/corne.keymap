@@ -209,8 +209,8 @@
 //                    |     |     |     |   |     |     |     |
 //vscode: LG (6) open explorer view (double tap: open file) (hold return to active editor)
         bindings = <
-    &kp ESC  &none      &mt_m LG(LS(6)) LG(6)   &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &kp LG(LA(LSHFT))          &none      &none        &none       &none
-    &kp DEL   &kp LEFT  &kp UP                  &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT      &kp LGUI   &kp LALT   &kp LCTRL       &none
+    &kp ESC  &none      &mt_m LG(LS(N6)) LG(N6)   &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &kp LG(LA(LSHFT))          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP                    &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT      &kp LGUI   &kp LALT   &kp LCTRL       &none
     &kp LCTRL  &none     &none                    &kp LC(LEFT)   &kp LC(RIGHT)      &kp PG_UP             /**/   &kp EXCL    &none          &kp SEMI   &kp COLON    &kp UNDER   &none
                                    &trans       &trans                &trans                /**/   &trans      &trans         &trans
                         >;
