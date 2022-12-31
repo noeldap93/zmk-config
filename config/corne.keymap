@@ -157,10 +157,12 @@
 // | 24   |  Z  |  X  |  C  |  V  |  B  |  30 |  K  |  M  |  ,  |  .  |  /  | CAPS |
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
+//vscode LG(LS(0)) Go to Symbol
+// mac LG(LS(N4)) screenshot (add ctrl to copy only)
         bindings = <
     &kp TAB     &kp Q              &mt_l LG(W) W    &kp F           &kp P              &mt_m LG(LS(ENTER))  G  /**/    &mt_m LG(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl VSCODE
     &kp BSPC    &mt_l LA(LS(A)) A  &mt_l LC(R) R    &kp S           &mt_l LG(LA(T)) T  &mt_m LG(ENTER)      D  /**/    &mt_m LG(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
-    &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(N4)) B      /**/    &mt_m LG(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
+    &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(N4))     B      /**/    &mt_m LG(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
                                                 &kp  LALT  &kp LGUI   &lt RAISEMAC ENTER                       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };      
@@ -173,6 +175,7 @@
 // | 24   |  Z  |  X  |  C  |  V  |  B  |  30 |  K  |  M  |  ,  |  .  |  /  | CAPS |
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
+
         bindings = <
     &kp TAB     &kp Q              &mt_l LC(W) W    &kp F           &kp P              &mt_m LS(LC(ENTER))  G  /**/    &mt_m LC(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl SPECIAL
     &kp BSPC    &mt_l LA(LS(A)) A  &kp R            &kp S           &mt_l LC(LA(T)) T  &mt_m LC(ENTER)      D  /**/    &mt_m LC(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
@@ -204,10 +207,11 @@
 // |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
+//vscode: LG (6) open explorer view (double tap: open file) (hold return to active editor)
         bindings = <
-    &kp ESC  &none      &none      &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &none          &none      &none        &none       &none
-    &kp DEL   &kp LEFT  &kp UP     &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT      &kp LGUI   &kp LALT   &kp LCTRL       &none
-    &kp LCTRL  &none     &none      &kp LC(LEFT)   &kp LC(RIGHT)      &kp PG_UP             /**/   &kp EXCL    &none          &kp SEMI   &kp COLON    &kp UNDER   &none
+    &kp ESC  &none      &mt_m LG(LS(6)) LG(6)   &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &kp LG(LA(LSHFT))          &none      &none        &none       &none
+    &kp DEL   &kp LEFT  &kp UP                  &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT      &kp LGUI   &kp LALT   &kp LCTRL       &none
+    &kp LCTRL  &none     &no                    &kp LC(LEFT)   &kp LC(RIGHT)      &kp PG_UP             /**/   &kp EXCL    &none          &kp SEMI   &kp COLON    &kp UNDER   &none
                                    &trans       &trans                &trans                /**/   &trans      &trans         &trans
                         >;
             };
@@ -322,12 +326,15 @@
         };
 
     vscode { // not developed
-
+// focus next group into next group LG 8 ( previous LG 7)
+// move editor into next group LG LS 7
+// goToNextSymbol LS LA LG Down/Up
+// go next edit location LS LA LG RIGHT/LEFT
     bindings = <
-    &kp TAB     &kp T       &kp  Q      &kp W       &kp E        &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
-    &kp LSHFT   &kp G       &kp  A      &kp S       &kp D        &kp F      /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
-    &kp LCTRL   &kp Z       &kp  X      &kp C       &kp V        &kp B      /**/    &kp N   &kp M       &kp COMMA       &kp DOT     &kp P        &kp ESC
-                                        &kp N   &kp SPACE   &kp ENTER       /**/    &kp ESC   &to COLEMAK   &sl NUMPAD
+    &kp TAB     &kp T                &kp E                  &kp LS(LA(LG(UP)))    &kp LS(LA(LG(DOWN)))    &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
+    &kp LSHFT   &kp X                &kp LG(LS(N7))         &kp LG(N7)            &kp LG(N8)              &kp LG(LS(N8))     /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
+    &kp LCTRL   &kp Z                &kp X                  &kp LS(LA(LG(LEFT))   &kp LS(LA(LG(RIGHT))    &kp B      /**/    &kp N   &kp M       &kp COMMA       &kp DOT     &kp P        &kp ESC
+                                        &kp N   &kp SPACE   &kp ENTER                                                  /**/    &kp ESC    &kp LSHFT    &sl NUMPAD
                         >;
         };
     };
