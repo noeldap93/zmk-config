@@ -23,6 +23,7 @@
 #define FUNCTION 9
 #define GAMES 10
 #define AOM 11
+#define VSCODE 12
 /*#define MINERAISE 8
 #define ADJUST 9
 */
@@ -157,7 +158,7 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
         bindings = <
-    &kp TAB     &kp Q              &mt_l LG(W) W    &kp F           &kp P              &mt_m LG(LS(ENTER))  G  /**/    &mt_m LG(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl FUNCTIONMAC
+    &kp TAB     &kp Q              &mt_l LG(W) W    &kp F           &kp P              &mt_m LG(LS(ENTER))  G  /**/    &mt_m LG(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl VSCODE
     &kp BSPC    &mt_l LA(LS(A)) A  &mt_l LC(R) R    &kp S           &mt_l LG(LA(T)) T  &mt_m LG(ENTER)      D  /**/    &mt_m LG(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
     &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(N4)) B      /**/    &mt_m LG(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
                                                 &kp  LALT  &kp LGUI   &lt RAISEMAC ENTER                       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
@@ -311,6 +312,17 @@
 
 
     aom { // not developed
+
+    bindings = <
+    &kp TAB     &kp T       &kp  Q      &kp W       &kp E        &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
+    &kp LSHFT   &kp G       &kp  A      &kp S       &kp D        &kp F      /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
+    &kp LCTRL   &kp Z       &kp  X      &kp C       &kp V        &kp B      /**/    &kp N   &kp M       &kp COMMA       &kp DOT     &kp P        &kp ESC
+                                        &kp N   &kp SPACE   &kp ENTER       /**/    &kp ESC   &to COLEMAK   &sl NUMPAD
+                        >;
+        };
+    };
+
+    vscode { // not developed
 
     bindings = <
     &kp TAB     &kp T       &kp  Q      &kp W       &kp E        &kp R      /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
