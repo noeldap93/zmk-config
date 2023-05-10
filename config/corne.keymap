@@ -162,7 +162,7 @@
         bindings = <
     &kp TAB     &kp Q              &mt_l LG(W) W    &kp F           &kp P              &mt_m LG(LS(ENTER))  G  /**/    &mt_m LG(N1) J     &mt_m LC(GRAVE) L   &kp U                     &mt_m F5 Y     &kp EQUAL        &sl VSCODE
     &kp BSPC    &mt_l LA(LS(A)) A  &mt_l LC(R) R    &kp S           &mt_l LG(LA(T)) T  &mt_m LG(ENTER)      D  /**/    &mt_m LG(N2) H     &kp N               &kp E                     &kp I          &kp O            &kp ESC
-    &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(N4))     B      /**/    &mt_m LG(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
+    &kp LSHFT   &mt_l LG(Z) Z      &mt_l LG(X) X    &mt_l LG(C) C   &mt_m LG(LA(V)) V  &mt_m LG(LS(N4))     B  /**/    &mt_m LG(N3) K     &kp M               &mt_m LG(LS(O)) COMMA      &kp DOT        &kp MINUS       &kp LCTRL
                                                 &kp  LALT  &kp LGUI   &lt RAISEMAC ENTER                       /**/    &lt LOWER SPACE   &kp LSHFT   &sl NUMPAD
                         >;
             };      
@@ -330,8 +330,9 @@
 // move editor into next group LG LS 7
 // goToNextSymbol LS LA LG Down/Up
 // go next edit location LS LA LG RIGHT/LEFT
+// goto prev next tab in group LA(LG(LEFT)) 
     bindings = <
-    &kp TAB             &kp E                  &kp LS(LA(F8))        &kp LA(F8)              &kp R             &kp T            /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
+    &kp TAB             &kp LA(LG(LEFT))       &kp LS(LA(F8))        &kp LA(F8)              &kp LA(LG(RIGHT))      &kp T            /**/    &kp Y   &kp U       &kp I           &kp O       &kp P           &none
     &kp LG(LS(N7))      &kp LG(N7)             &kp LS(LA(LG(UP)))    &kp LS(LA(LG(DOWN)))    &kp LG(N8)        &kp LG(LS(N8))   /**/    &kp H   &kp J       &kp K           &kp L       &kp P        &kp ESC
     &kp LCTRL           &kp X                  &kp LS(LA(LG(LEFT)))  &kp LS(LA(LG(RIGHT)))   &kp B             &kp Z            /**/    &kp N   &kp M       &kp COMMA       &kp DOT     &kp P        &kp ESC
                                         &kp N   &kp LSHFT    &lt RAISEMAC ENTER                                                 /**/    &kp ESC    &kp LSHFT    &sl NUMPAD
