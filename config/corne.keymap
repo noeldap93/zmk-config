@@ -238,7 +238,7 @@
 // |      | Und | Cut | Cpy | Pst |     |   | PLY |  V+ |  V- | MTE |  \  |      |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &kp EQUAL       &trans
+    &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &CARET         &kp EQUAL       &trans
     &trans  &kp LBRC  &kp RBRC       &kp LPAR   &kp RPAR    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
     &trans  &kp TILDE &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
