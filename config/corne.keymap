@@ -24,6 +24,7 @@
 #define GAMES 10
 #define AOM 11
 #define VSCODE 12
+#define MOOM 13
 /*#define MINERAISE 8
 #define ADJUST 9
 */
@@ -209,9 +210,9 @@
 //                    |     |     |     |   |     |     |     |
 //vscode: LG (6) open explorer view (double tap: open file) (hold return to active editor)
         bindings = <
-    &kp ESC  &none      &mt_m LG(LS(N6)) LG(N6)   &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &kp LG(LA(LSHFT))      &none      &none        &none       &sl VSCODE
-    &kp DEL   &kp LEFT  &kp UP                     &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT             &kp LGUI   &kp LALT     &kp LCTRL   &none
-    &kp LCTRL  &none     &none                    &kp LC(LEFT)   &kp LC(RIGHT)      &kp PG_UP             /**/   &kp EXCL    &none                  &kp SEMI   &kp COLON    &kp UNDER   &none
+    &kp ESC  &kp LC(ENTER)  &mt_m LG(LS(N6)) LG(N6)   &kp LG(LEFT)   &kp LG(RIGHT)      &kp PG_DN             /**/   &none       &kp LG(LA(LSHFT))      &none      &none        &none       &sl VSCODE
+    &kp DEL   &kp LEFT      &kp UP                     &kp DOWN       &kp  RIGHT         &mt_m LS(LG(K)) ENTER /**/   &kp QMARK   &kp LSHFT             &kp LGUI   &kp LALT     &kp LCTRL   &none
+    &kp LCTRL  &none        &none                    &kp LC(LEFT)   &kp LC(RIGHT)      &kp PG_UP             /**/   &kp EXCL    &none                  &kp SEMI   &kp COLON    &kp UNDER   &none
                                    &trans       &trans                &trans                /**/   &trans      &trans         &trans
                         >;
             };
@@ -238,7 +239,7 @@
 // |      | Und | Cut | Cpy | Pst |     |   | PLY |  V+ |  V- | MTE |  \  |      |
 //                    |     |     |     |   |     |     |     |
         bindings = <
-    &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &none         &kp EQUAL       &trans
+    &trans  &kp LBKT  &kp RBKT      &kp BSLH    &kp FSLH  &kp AMPS /**/    &none      &kp PLUS       &kp STAR       &kp CARET         &kp EQUAL       &trans
     &trans  &kp LBRC  &kp RBRC       &kp LPAR   &kp RPAR    &kp PIPE   /**/    &kp GRAVE    &kp SQT    &kp DQT        &kp LT        &kp GT      &kp ESC    
     &trans  &kp TILDE &kp PERCENT    &kp DOLLAR   &kp HASH   &kp AT       /**/    &none       &none      &kp SEMI        &kp COLON    &kp UNDER   &trans
                                     &trans      &trans      &trans      /**/    &trans      &trans      &trans
